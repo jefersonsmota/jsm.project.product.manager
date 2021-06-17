@@ -50,11 +50,11 @@ Website composto por uma tela de login (autenticando via api) e um CRUD de produ
 
 ## :sparkles: Funcionalidades ##
 
-:heavy_check_mark: Login de usuário
-:heavy_check_mark: Listagem de produtos
-:heavy_check_mark: Criação/Adição de produtos
-:heavy_check_mark: Edição de produtos
-:heavy_check_mark: Exclusão de produtos
+:heavy_check_mark: Login de usuário \
+:heavy_check_mark: Listagem de produtos \
+:heavy_check_mark: Criação/Adição de produtos \
+:heavy_check_mark: Edição de produtos \
+:heavy_check_mark: Exclusão de produtos 
 
 ## :rocket: Tecnologias ##
 
@@ -72,7 +72,7 @@ Antes de começar :checkered_flag:, você precisa ter instalados em sua maquina:
 - [Git](https://git-scm.com)
 - [Node](https://nodejs.org/en/) 
 - [Angular](https://angular.io/)
-- [.Net 5 Runtime](https://dotnet.microsoft.com/download/dotnet/5.0)
+- [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/pt-br/) ou [.Net 5 Runtime](https://dotnet.microsoft.com/download/dotnet/5.0)
 - [SQL Server 2019](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
 - ou Para container com [Docker](https://hub.docker.com/r/microsoft/mssql-server-windows-express/)
 
@@ -107,6 +107,10 @@ $ cd Project.3pMYbIl
     "DefaultConnection": "DATABASE_CONNECTION_STRING"
   },
   ...
+```
+4. Execute o projeto com o comando
+```Powershell
+dotnet run
 ```
 
 ### Web App (Front-End)
