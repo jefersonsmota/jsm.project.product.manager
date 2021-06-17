@@ -1,0 +1,19 @@
+<div class="form-container">
+    <div class="form-title">
+        <h1 class="title">LOGIN</h1>
+    </div>
+    <div class="form-content">
+        <form class="auth-form" [formGroup]="singInForm" (ngSubmit)="onSubmit()">
+            <div class="field">
+                <input class="input" type="text" formControlName="Username" placeholder="username" name="usrLogin" id="usrLogin" required>
+            </div>
+            <div class="field">
+                <input class="input" type="password" formControlName="Password" placeholder="password" name="usrPassword" id="usrPassword"  required>
+            </div>
+            <div class="field">
+                <button class="button is-success {{isLoadClass}}" type="submit" [disabled]="singInForm.invalid && singInForm.enabled">Entrar</button>
+            </div>
+        </form>
+    </div>
+</div>
+

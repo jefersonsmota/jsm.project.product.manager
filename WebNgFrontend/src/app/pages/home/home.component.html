@@ -1,0 +1,23 @@
+<app-navbar (logoutAction)="logout()"></app-navbar>
+<div class="container">
+    <div class="list">
+        <app-card-produto *ngFor="let produto of _products" nome="{{produto.nome}}" valor="{{produto.valor}}"
+            imagemURL="{{produto.imagemURL}}" id="{{produto.id}}" (remover)="removeProduct($event)" (editar)="editProduct($event)"></app-card-produto>
+        <div *ngIf="_products.length  == 0">
+            <span>Não há itens</span>
+        </div>
+    </div>
+
+    <div class="buttons is-right">
+        <button (click)="adicionarForm()" class="button is-floating is-danger">
+            <i class="mdi mdi-plus"></i>
+        </button>
+    </div>
+
+    <app-modal
+        [ativo]="isModalActive"
+        [productForm]="productForm"
+        (cancelarAction)="toggleModal()"
+        (sucessoAction)="salvar()"
+    ></app-modal>
+</div>

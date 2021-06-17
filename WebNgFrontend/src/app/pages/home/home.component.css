@@ -1,0 +1,13 @@
+.list {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+  }
+
+.container > #inputBusca {
+  margin-top: 8px;
+}
+
+  

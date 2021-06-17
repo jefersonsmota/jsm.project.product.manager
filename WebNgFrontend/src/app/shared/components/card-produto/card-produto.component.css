@@ -1,0 +1,12 @@
+.card {
+    margin: 15px;
+    min-width: 200px;
+}
+
+.wrap-title {
+    display: inline-block;
+    max-width: 170px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}

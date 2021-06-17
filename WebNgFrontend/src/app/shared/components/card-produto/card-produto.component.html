@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <img src="{{imagemURL}}" alt="imagem {{nome}}">
+      </figure>
+    </div>
+    <div class="card-content">
+      <p class="title wrap-title is-4" title="{{nome}}">{{nome}}</p>
+      <div class="content">
+        R$ {{valor}}
+      </div>
+    </div>
+    <footer class="card-footer">
+      <p class="card-footer-item">
+        <button class="button is-ghost"  (click)="onEditar(id)">Editar</button>
+      </p>
+      <p class="card-footer-item">
+        <button class="button is-ghost" (click)="onRemover(id)">Remover</button>
+      </p>
+    </footer>
+  </div>
