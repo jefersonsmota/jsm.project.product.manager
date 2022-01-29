@@ -6,10 +6,10 @@ export class AppConstants {
     public static API_RESOURCE = ((): string => {
         if (environment) {
             // dev
-            return 'http://localhost:3949/';
+            return 'http://localhost:5003/';
         } else {
             // prod
-            return 'http://localhost:xxx/';
+            return 'https://localhost:xxx/';
         }
     })();
 

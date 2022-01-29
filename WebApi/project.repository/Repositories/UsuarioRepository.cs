@@ -20,21 +20,21 @@ namespace project.repository.Repositories
 
         public async Task<Autenticacao> login(Usuario usuario)
         {
-            var autenticacao = usuario.BasicAutentication();
+            //var autenticacao = usuario.BasicAutentication();
 
-            _httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", autenticacao);
+            //_httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", autenticacao);
 
-            var response = await _httpClient.PostAsync(AUTHAPI, new StringContent(""));
+            //var response = await _httpClient.PostAsync(AUTHAPI, new StringContent(""));
 
-            var settings = new JsonSerializerSettings
-            {
-                NullValueHandling = NullValueHandling.Ignore,
-                MissingMemberHandling = MissingMemberHandling.Ignore
-            };
+            //var settings = new JsonSerializerSettings
+            //{
+            //    NullValueHandling = NullValueHandling.Ignore,
+            //    MissingMemberHandling = MissingMemberHandling.Ignore
+            //};
 
-            var auth = JsonConvert.DeserializeObject<Autenticacao>(await response.Content.ReadAsStringAsync(), settings);
+            //var auth = JsonConvert.DeserializeObject<Autenticacao>(await response.Content.ReadAsStringAsync(), settings);
 
-            return auth;
+            return new Autenticacao { success = true };
         }
     }
 }

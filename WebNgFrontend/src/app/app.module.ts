@@ -12,6 +12,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { CardProdutoComponent } from './shared/components/card-produto/card-produto.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { ModalComponent } from './shared/components/modal/modal.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ModalComponent } from './shared/components/modal/modal.component';
     HomeComponent,
     CardProdutoComponent,
     NavbarComponent,
-    ModalComponent
+    ModalComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
