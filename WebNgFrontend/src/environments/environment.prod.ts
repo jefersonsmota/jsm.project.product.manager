@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: false,
+  productApi: 'http://3pmybil-api:30001/'
 };

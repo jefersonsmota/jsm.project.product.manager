@@ -1,16 +1,13 @@
-FROM node:16.13 as build
+FROM node:16.13-alpine3.15 as build
 
 WORKDIR /app
 
 COPY . .
 
-RUN npm install -g npm@8.4.0
-RUN npm i 
-RUN ng build --configuration=production
-
+RUN npm install
+RUN npm run build --delete-output-path
 
 FROM nginx:latest as publish
 
-COPY --from=build /app/dist/WebNgFrontend/ /usr/share/nginx/html
-
-EXPOSE 4200
+COPY --from=build /app/dist/web-ng-frontend/ /usr/share/nginx/html
+COPY --from=build /app/nginx.conf /etc/nginx

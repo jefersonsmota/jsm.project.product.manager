@@ -4,12 +4,12 @@ export class AppConstants {
     public static USERSESSION = 'currentUserAuth';    
 
     public static API_RESOURCE = ((): string => {
-        if (environment) {
+        if (environment.production) {
             // dev
-            return 'http://localhost:5003/';
+            return environment.productApi;
         } else {
             // prod
-            return 'https://localhost:xxx/';
+            return environment.productApi;
         }
     })();
 

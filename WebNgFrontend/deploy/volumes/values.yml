@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: 3pmybil-front-configmap
+  namespace: 3pmybil
+data:
+  HOST_API: 3pmybil-api:30001

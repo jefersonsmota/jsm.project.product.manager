@@ -34,7 +34,7 @@ namespace project.repository.Repositories
 
             //var auth = JsonConvert.DeserializeObject<Autenticacao>(await response.Content.ReadAsStringAsync(), settings);
 
-            return new Autenticacao { success = true };
+            return await Task.FromResult<Autenticacao>( new Autenticacao { success = true });
         }
     }
 }

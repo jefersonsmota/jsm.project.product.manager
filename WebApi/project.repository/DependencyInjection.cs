@@ -15,7 +15,12 @@ namespace project.repository
     {
         public static IServiceCollection AddRepository(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<ProjectDBContext>(opt => opt.UseSqlServer(configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly(typeof(ProjectDBContext).Assembly.FullName)));
+            services.AddDbContext<ProjectDBContext>(opt =>
+                {
+                    var connStr = configuration.GetConnectionString("DefaultConnection");
+                    opt.UseSqlServer(connStr, b => b.MigrationsAssembly(typeof(ProjectDBContext).Assembly.FullName));
+                }
+            );
             services.AddScoped<HttpClient>();
             services.AddScoped<ProjectDBContext, ProjectDBContext>();
             services.AddScoped<IProdutoRepository, ProdutoRepository>();
