@@ -1,35 +1,43 @@
 {
-  "AllowedHosts": "*",
-  "$schema": "http://json.schemastore.org/launchsettings.json",
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:3949",
-      "sslPort": 0
-    }
-  },
   "profiles": {
+    "project.api": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:5021;http://localhost:5022"
+    },
     "IIS Express": {
       "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "project.api": {
-      "commandName": "Project",
-      "launchBrowser": true,
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "https://localhost:5001;http://localhost:5003",
-      "dotnetRunMessages": "true"
-    },
     "Docker": {
       "commandName": "Docker",
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
-      "DockerfileRunArguments": "-p 5003:80 --link sqls-19",
-      "publishAllPorts": true
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "environmentVariables": {
+        "ConnectionStrings__DefaultConnection": "Data Source=sqls-19;Initial Catalog=sitemercadodb; user id=AppSMUserDev; password=sitemercado1"
+      },
+      "DockerfileRunArguments": "--name merrcado-api -p 5003:80 --network project-3pmybil-bridge",
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  },
+  "AllowedHosts": "*",
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:23682",
+      "sslPort": 44318
     }
   }
 }

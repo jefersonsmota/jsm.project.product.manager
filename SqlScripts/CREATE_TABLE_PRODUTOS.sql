@@ -7,11 +7,15 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[Produto](
-	[Id] [uniqueidentifier] NOT NULL,
-	[Nome] [varchar](150) NOT NULL,
-	[Valor] [decimal](18, 2) NOT NULL,
-	[ImagemURL] [varchar](300) NOT NULL,
+CREATE TABLE [dbo].[Products](
+    [Id] uniqueidentifier NOT NULL,
+    [Name] varchar(max) NOT NULL,
+    [Price] decimal(18,2) NOT NULL,
+    [ImagemURL] varchar(max) NOT NULL,
+    [CreatedDateUtc] datetime2 NOT NULL,
+    [LastUpdateDataUtc] datetime2 NULL,
+	[IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+	[DeleteDateUtc] datetime2 NULL
  CONSTRAINT [PK_Produto] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC

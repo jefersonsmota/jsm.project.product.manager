@@ -7,10 +7,10 @@ metadata:
     app: pod-front
 spec:
   containers:
-    - name: front
-      image: jsmota/dev:ngfront-3pmybil
-      ports:
-        - containerPort: 80
-      envFrom:
-        - configMapRef:
-            name: 3pmybil-front-configmap
+  - name: front
+    image: jsmota/dev:ngfront-3pmybil-1.0.0
+    ports:
+      - containerPort: 80
+    envFrom:
+      - configMapRef:
+          name: 3pmybil-front-configmap

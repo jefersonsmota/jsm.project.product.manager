@@ -11,6 +11,8 @@ export class AppConstants {
             // prod
             return environment.productApi;
         }
+
+        console.log(`Env: ${environment}");
     })();
 
     public static PRODUCT_RESOURCE = 'api/produto';

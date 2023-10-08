@@ -28,12 +28,4 @@ namespace project.domain.Exceptions
 
         }
     }
-
-    public class NotFoundException : HandlerException
-    {
-        public NotFoundException(string message = "", Exception innerException = null) : base(message, innerException, 404)
-        {
-
-        }
-    }
 }

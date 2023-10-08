@@ -1,14 +1,35 @@
-﻿using FluentValidation.Results;
+﻿using project.domain.Exceptions;
+using project.domain.Exceptions.BaseValidator;
 using System;
 
 namespace project.domain.Entities
 {
-    public abstract class Entity
+    public interface IEntity
     {
-        public Guid Id { get; protected set; }
+        Guid Id { get; }
+        DateTime CreatedDateUtc { get; }
+        DateTime? LastUpdateDataUtc { get; }
+        bool IsDeleted { get; }
+        DateTime? DeleteDateUtc { get; }
+    }
 
-        public ValidationResult Validation { get; protected set; }
+    public abstract class Entity : EntityValidator<EntityValidationException>, IEntity
+    {
+        protected Entity()
+        {
+            Id = Guid.NewGuid();
+            CreatedDateUtc = DateTime.UtcNow;
+            IsDeleted = false;
+        }
+        public virtual Guid Id { get; private set; }
+        public virtual DateTime CreatedDateUtc { get; private set; }
+        public virtual DateTime? LastUpdateDataUtc { get; private set; }
+        public virtual bool IsDeleted { get; private set; }
+        public virtual DateTime? DeleteDateUtc { get; private set; }
 
-        public abstract bool IsValid();
+        protected void Update()
+        {
+            LastUpdateDataUtc = DateTime.UtcNow;
+        }
     }
 }

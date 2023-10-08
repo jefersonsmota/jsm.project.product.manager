@@ -1,24 +1,25 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Reflection;
 
 namespace project.api.Controllers
 {
-    [Route("")]
     [ApiController]
     [AllowAnonymous]
     public class AboutController : ControllerBase
     {
+        [HttpGet]
+        [Route("[controller]")]
         public IActionResult Index()
         {
+            var version = Assembly.GetExecutingAssembly().GetName().Version
+                          ?? Assembly.GetEntryAssembly()?.GetName().Version;
+
             return Ok(new
             {
                 Title = "Project 3pMYbIl",
                 Description = "API RESTful CRUD Produto",
-                Version = "1.0.0",
+                Version = $"{version!.Major}.{version!.Minor}.{version!.Build}",
                 Author = "Jefeson Mota"
             });
         }
