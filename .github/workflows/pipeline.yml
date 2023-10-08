@@ -22,15 +22,15 @@ jobs:
               dotnet-version: ${{ matrix.dotnet-version }}
           
           - name: Install dependencies
-            working-directory: ./WebApi
+            working-directory: ./web-api
             run: dotnet restore
           
           - name: Build
-            working-directory: ./WebApi
+            working-directory: ./web-api
             run: dotnet build --configuration Release --no-restore
           
           - name: Test
-            working-directory: ./WebApi
+            working-directory: ./web-api
             run: dotnet test --no-restore --verbosity normal
 
 

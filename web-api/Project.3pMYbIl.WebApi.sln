@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{E41A8E7A-E12B-4405-991E-0AD3D8D07901}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "principal", "principal", "{E41A8E7A-E12B-4405-991E-0AD3D8D07901}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project.application", "project.application\project.application.csproj", "{E73A588E-57D4-4692-A1F0-B3FBC8570447}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project.application", "src\project.application\project.application.csproj", "{E73A588E-57D4-4692-A1F0-B3FBC8570447}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project.domain", "project.domain\project.domain.csproj", "{4343F29F-C46E-49FA-AD28-636EE9CF49D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project.domain", "src\project.domain\project.domain.csproj", "{4343F29F-C46E-49FA-AD28-636EE9CF49D8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project.data", "project.data\project.data.csproj", "{DF31C29F-871F-46E5-A7DC-997F0B9720E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project.data", "src\project.data\project.data.csproj", "{DF31C29F-871F-46E5-A7DC-997F0B9720E9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project.api", "project.api\project.api.csproj", "{4DCBACED-1CEC-47A8-BC14-27F7BFD7DCBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project.api", "src\project.api\project.api.csproj", "{4DCBACED-1CEC-47A8-BC14-27F7BFD7DCBB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project.data.migration", "project.data.migration\project.data.migration.csproj", "{04A6E2D1-5B0A-4C93-BA4C-E9BA9660166A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project.data.migration", "src\project.data.migration\project.data.migration.csproj", "{04A6E2D1-5B0A-4C93-BA4C-E9BA9660166A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project.contracts", "project.contracts\project.contracts.csproj", "{4092FBFB-1795-4514-AAB3-E2A74929BE4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project.contracts", "src\project.contracts\project.contracts.csproj", "{4092FBFB-1795-4514-AAB3-E2A74929BE4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "project.aspnetcore.infrastructure", "project.aspnetcore.infrastructure\project.aspnetcore.infrastructure.csproj", "{B3446CD4-AACA-4313-868F-90824BBE06DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "project.aspnetcore.infrastructure", "src\project.aspnetcore.infrastructure\project.aspnetcore.infrastructure.csproj", "{B3446CD4-AACA-4313-868F-90824BBE06DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
