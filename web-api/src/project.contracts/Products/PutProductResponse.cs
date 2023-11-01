@@ -1,4 +1,6 @@
-﻿namespace project.contracts.Products
+﻿using Newtonsoft.Json;
+
+namespace project.contracts.Products
 {
     public class PutProductResponse
     {
@@ -8,6 +10,7 @@
             Id = id;
         }
 
-        public virtual Guid Id { get; private set; }
+        [JsonProperty(PropertyName = "id", Required = Required.Always)]
+        public Guid Id { get; private set; }
     }
 }

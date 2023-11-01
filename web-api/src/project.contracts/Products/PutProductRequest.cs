@@ -1,4 +1,6 @@
-﻿namespace project.contracts.Products
+﻿using Newtonsoft.Json;
+
+namespace project.contracts.Products
 {
     public class PutProductRequest
     {
@@ -12,8 +14,14 @@
             Price = price;
             ImageURL = imageUrl;
         }
+
+        [JsonProperty(PropertyName = "name", Required = Required.Always)]
         public string Name { get; private set; }
+
+        [JsonProperty(PropertyName = "price", Required = Required.Always)]
         public decimal Price { get; private set; }
+
+        [JsonProperty(PropertyName = "imageURL", Required = Required.Always)]
         public string ImageURL { get; private set; }
     }
 }

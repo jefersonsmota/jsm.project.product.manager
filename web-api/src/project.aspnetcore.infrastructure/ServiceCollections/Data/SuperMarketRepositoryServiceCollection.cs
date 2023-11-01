@@ -25,7 +25,6 @@ namespace project.aspnetcore.infrastructure.ServiceCollections.Data
             services.AddScoped<IProjectDBContext>(x => x.GetRequiredService<ProjectDBContext>());
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped<IUserRepository, UserRepository>();
 
             return services;
         }

@@ -1,4 +1,7 @@
-﻿namespace project.contracts.Products
+﻿
+using Newtonsoft.Json;
+
+namespace project.contracts.Products
 {
     public class GetProductResponse
     {
@@ -13,9 +16,17 @@
             Price = price;
             ImageURL = imageUrl;
         }
+
+        [JsonProperty(PropertyName = "id", Required = Required.Always)]
         public Guid Id { get; private set; }
+
+        [JsonProperty(PropertyName = "name", Required = Required.Always)]
         public string Name { get; private set; }
+
+        [JsonProperty(PropertyName = "price", Required = Required.Always)]
         public decimal Price { get; private set; }
+
+        [JsonProperty(PropertyName = "imageURL", Required = Required.Always)]
         public string ImageURL { get; private set; }
     }
 }

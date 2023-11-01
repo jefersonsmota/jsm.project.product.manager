@@ -7,9 +7,12 @@ namespace project.api.Filters
     public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
     {
         private readonly IApiFilterException _apiFilterException;
-        public ApiExceptionFilterAttribute(IApiFilterException apiFilterException)
+        private readonly ILogger<ApiExceptionFilterAttribute> _logger;
+        public ApiExceptionFilterAttribute(IApiFilterException apiFilterException, ILogger<ApiExceptionFilterAttribute> logger)
         {
             _apiFilterException = apiFilterException;
+            _logger = logger;
+
         }
         public override void OnException(ExceptionContext context)
         {
@@ -23,6 +26,8 @@ namespace project.api.Filters
 
             context.ExceptionHandled = true;
             context.Result = result;
+
+            _logger.LogError(context.Exception, context.Exception.Message, result);
 
             base.OnException(context);
         }

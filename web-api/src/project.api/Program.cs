@@ -1,24 +1,31 @@
+using NLog.Web;
 using project.api.Filters;
 using project.aspnetcore.infrastructure.FilterExceptions;
 using project.aspnetcore.infrastructure.ServiceCollections.Application;
 using project.aspnetcore.infrastructure.ServiceCollections.Data;
+using project.aspnetcore.infrastructure.ServiceCollections.Infrastructure;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton(builder.Configuration);
+builder.Services.AddSingleton<IApiFilterException, ApiFilterException>();
+//builder.Services.AddScoped<ApiExceptionFilterAttribute>();
+
+ElasticsearchLogServiceCollection.AddService(builder.Services, builder.Host);
+
 
 builder.Services.AddMvc(options =>
 {
-    options.Filters.Add(new ApiExceptionFilterAttribute(new ApiFilterException()));
+    options.Filters.Add<ApiExceptionFilterAttribute>();
 });
+
 
 
 builder.Services

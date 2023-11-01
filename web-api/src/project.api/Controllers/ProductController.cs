@@ -16,7 +16,12 @@ namespace project.api.Controllers
         private readonly IGetAllProducts _getAll;
         private readonly IGetProduct _get;
         private readonly IDeleteProduct _delete;
-        public ProductController(ICreateProduct create, IUpdateProduct update, IGetAllProducts getAll, IGetProduct get, IDeleteProduct delete)
+        public ProductController(
+            ICreateProduct create,
+            IUpdateProduct update,
+            IGetAllProducts getAll,
+            IGetProduct get,
+            IDeleteProduct delete)
         {
             _create = create;
             _update = update;
