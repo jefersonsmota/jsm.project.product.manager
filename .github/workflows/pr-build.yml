@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  call-workflow:
+  pr-build:
     uses: ./.github/workflows/build.yml
     with:
       work-dir: ./web-api
