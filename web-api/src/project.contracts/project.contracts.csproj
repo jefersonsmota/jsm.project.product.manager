@@ -8,7 +8,7 @@
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	<Authors>Jeferson Mota</Authors>
 	<PackageDescription>This package adds the Project.3pMYbIl API contracts.</PackageDescription>
-	<RepositoryUrl>https://github.com/jefersonsmota/Project.3pMYbIl.Contracts</RepositoryUrl>
+	<RepositoryUrl>https://github.com/jefersonsmota/Project.3pMYbIl</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
