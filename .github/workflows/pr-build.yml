@@ -6,6 +6,6 @@ on:
 
 jobs:
   call-workflow:
-    uses: ./.github/workflows/templates/build.yml
+    uses: ./.github/workflows/build.yml
     with:
       work-dir: ./web-api

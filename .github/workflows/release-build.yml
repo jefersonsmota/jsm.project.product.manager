@@ -6,13 +6,13 @@ on:
 
 jobs:
   release-build:
-    uses: ./.github/workflows/templates/build.yml
+    uses: ./.github/workflows/build.yml
     with:
       work-dir: web-api
 
   push-to-registy:
     needs: release-build
-    uses: ./.github/workflows/templates/package.yml
+    uses: ./.github/workflows/package.yml
     with:
       project-dir: ./web-api/src/project.contracts
     
