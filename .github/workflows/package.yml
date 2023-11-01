@@ -15,6 +15,17 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
+      - name: Setup build .Net Core ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+      - uses: actions/cache@v3
+        with:
+          path: ~/.nuget/packages
+          # Look to see if there is a cache hit for the corresponding requirements file
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget
       - name: Install dependencies
         run: dotnet restore ${{ inputs.project-dir }}
       - run: dotnet build --configuration Release ${{ inputs.project-dir }}
