@@ -8,4 +8,4 @@ jobs:
   call-workflow:
     uses: ./.github/workflows/templates/build.yml
     with:
-      work-dir: web-api
+      work-dir: ./web-api

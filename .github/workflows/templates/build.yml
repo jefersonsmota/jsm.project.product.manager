@@ -31,15 +31,15 @@ jobs:
             ${{ runner.os }}-nuget
       
       - name: Install dependencies
-        working-directory: ./${{ inputs.work-dir }}
+        working-directory: ${{ inputs.work-dir }}
         run: dotnet restore
       
       - name: Build
-        working-directory: ./${{ inputs.work-dir }}
+        working-directory: ${{ inputs.work-dir }}
         run: dotnet build --configuration Release --no-restore
       
       - name: Test
-        working-directory: ./${{ inputs.work-dir }}/tests
+        working-directory: ${{ inputs.work-dir }}/tests
         run: dotnet test --no-restore --verbosity normal
 
 

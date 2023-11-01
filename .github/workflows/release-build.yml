@@ -14,7 +14,5 @@ jobs:
     needs: release-build
     uses: ./.github/workflows/templates/package.yml
     with:
-      project-dir: web-api/src/project.contracts
+      project-dir: ./web-api/src/project.contracts
     
-
-

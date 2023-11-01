@@ -6,8 +6,6 @@ on:
       project-dir:
         required: true
         type: string
-  release:
-    types: [created]
 
 jobs:
   push-to-registy:
@@ -23,8 +21,8 @@ jobs:
           source-url: https://nuget.pkg.github.com/jefersonsmota/index.json
         env:
           NUGET_AUTH_TOKEN: ${{secrets.PACKAGE_REGISTRY_SECRET}}
-      - run: dotnet build --configuration Release ./${{ inputs.project-dir }}
+      - run: dotnet build --configuration Release ${{ inputs.project-dir }}
       - name: Create the package
-        run: dotnet pack --configuration Release ./${{ inputs.project-dir }}
+        run: dotnet pack --configuration Release ${{ inputs.project-dir }}
       - name: Publish the package to GHPR
-        run: dotnet nuget push ./${{ inputs.project-dir }}/bin/Release/*.nupkg
+        run: dotnet nuget push ${{ inputs.project-dir }}/bin/Release/*.nupkg
