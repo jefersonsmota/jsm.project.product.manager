@@ -1,0 +1,20 @@
+name: Build and Release
+run-name: ${{ github.actor }}
+on:
+  push:
+    branches:  [main]
+
+jobs:
+  release-build:
+    uses: ./.github/workflows/templates/build.yml
+    with:
+      work-dir: web-api
+
+  push-to-registy:
+    needs: release-build
+    uses: ./.github/workflows/templates/package.yml
+    with:
+      project-dir: web-api/src/project.contracts
+    
+
+

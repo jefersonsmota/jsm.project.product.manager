@@ -1,0 +1,45 @@
+name: Build and Test
+
+on:
+  workflow_call:
+    inputs:
+      work-dir: 
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: [ '7.0.x' ]
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup build .Net Core ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+    
+      - uses: actions/cache@v3
+        with:
+          path: ~/.nuget/packages
+          # Look to see if there is a cache hit for the corresponding requirements file
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget
+      
+      - name: Install dependencies
+        working-directory: ./${{ inputs.work-dir }}
+        run: dotnet restore
+      
+      - name: Build
+        working-directory: ./${{ inputs.work-dir }}
+        run: dotnet build --configuration Release --no-restore
+      
+      - name: Test
+        working-directory: ./${{ inputs.work-dir }}/tests
+        run: dotnet test --no-restore --verbosity normal
+
+

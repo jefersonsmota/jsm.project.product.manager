@@ -1,0 +1,11 @@
+name: Pull Request Build
+run-name: ${{ github.actor }}
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  call-workflow:
+    uses: ./.github/workflows/templates/build.yml
+    with:
+      work-dir: web-api

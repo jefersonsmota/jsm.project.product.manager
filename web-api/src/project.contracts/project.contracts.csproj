@@ -1,10 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	<Version>1.0.1</Version>
+	<Version>1.0.0</Version>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<Authors>Jeferson Mota</Authors>
+	<PackageDescription>This package adds the Project.3pMYbIl API contracts.</PackageDescription>
+	<RepositoryUrl>https://github.com/jefersonsmota/Project.3pMYbIl</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
