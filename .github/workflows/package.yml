@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install dependencies
-        run: dotnet restore --configuration Release ${{ inputs.project-dir }}
+        run: dotnet restore ${{ inputs.project-dir }}
       - run: dotnet build --configuration Release ${{ inputs.project-dir }}
       - name: Create the package
         run: dotnet pack --configuration Release ${{ inputs.project-dir }}
