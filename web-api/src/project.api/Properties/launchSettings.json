@@ -1,0 +1,43 @@
+{
+  "profiles": {
+    "project.api": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:5021;http://localhost:5022"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "environmentVariables": {
+        "ConnectionStrings__DefaultConnection": "Data Source=sqls-19;Initial Catalog=sitemercadodb; user id=AppSMUserDev; password=sitemercado1"
+      },
+      "DockerfileRunArguments": "--name merrcado-api -p 5003:80 --network project-3pmybil-bridge",
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  },
+  "AllowedHosts": "*",
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:23682",
+      "sslPort": 44318
+    }
+  }
+}

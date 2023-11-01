@@ -1,0 +1,31 @@
+GO
+
+/****** Object:  Table [dbo].[Produto]    Script Date: 16/06/2021 23:02:49 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Products](
+    [Id] uniqueidentifier NOT NULL,
+    [Name] varchar(max) NOT NULL,
+    [Price] decimal(18,2) NOT NULL,
+    [ImagemURL] varchar(max) NOT NULL,
+    [CreatedDateUtc] datetime2 NOT NULL,
+    [LastUpdateDataUtc] datetime2 NULL,
+	[IsDeleted] bit NOT NULL DEFAULT CAST(0 AS bit),
+	[DeleteDateUtc] datetime2 NULL
+ CONSTRAINT [PK_Produto] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Produto] ADD  DEFAULT (newid()) FOR [Id]
+GO

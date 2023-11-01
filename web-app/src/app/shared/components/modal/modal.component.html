@@ -1,0 +1,38 @@
+<div class="modal {{ativo ? 'is-active': ''}} ">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Produto</p>
+        <button class="delete" aria-label="close" (click)="onCancelar()"></button>
+      </header>
+      <section class="modal-card-body">
+        <form [formGroup]="productForm">
+            <div class="field is-grouped">
+                <input type="hidden" name="id" formControlName="id">
+                <div class="control is-expanded">
+                    <label class="label">Nome</label>
+                    <input class="input" type="text" maxlength="150" name="nome" id="nome" placeholder="Nome do produto" formControlName="nome">
+                </div>
+                <div class="control is-expanded">
+                    <label class="label">Valor</label>
+                    <input maxlength="10" currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" class="input" placeholder="0.00" formControlName="valor" />
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Imagem</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input type="text" name="imagemURL" id="imagemURL" class="input" placeholder="url" formControlName="imagemURL">
+                    <span class="icon is-small is-left">
+                        <i class="mdi mdi-image"></i>
+                    </span>
+                </div>
+            </div>
+        </form>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" (click)="onSucesso()" [disabled]="productForm.invalid" >Salvar</button>
+        <button class="button" (click)="onCancelar()">Cancelar</button>
+      </footer>
+    </div>
+  </div>
