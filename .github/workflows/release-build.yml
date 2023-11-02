@@ -15,4 +15,5 @@ jobs:
     uses: ./.github/workflows/package.yml
     with:
       project-dir: ./web-api/src/project.contracts
+      api-pat: ${{ secrets.PACKAGE_REGISTRY_SECRET }}
     
