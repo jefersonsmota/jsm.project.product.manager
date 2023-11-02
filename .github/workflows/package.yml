@@ -13,6 +13,9 @@ jobs:
     permissions:
       packages: write
       contents: read
+    strategy:
+      matrix:
+        dotnet-version: [ '7.0.x' ]
     steps:
       - uses: actions/checkout@v4
       - name: Setup build .Net Core ${{ matrix.dotnet-version }}
@@ -22,7 +25,6 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: ~/.nuget/packages
-          # Look to see if there is a cache hit for the corresponding requirements file
           key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
           restore-keys: |
             ${{ runner.os }}-nuget
@@ -32,4 +34,4 @@ jobs:
       - name: Create the package
         run: dotnet pack --configuration Release ${{ inputs.project-dir }}
       - name: Publish the package to GHPR
-        run: dotnet nuget push ${{ inputs.project-dir }}/bin/Release/*.nupkg --api-key ${{secrets.PACKAGE_REGISTRY_SECRET}} --source "https://nuget.pkg.github.com/jefersonsmota/index.json"
+        run: dotnet nuget push ${{ inputs.project-dir }}/bin/Release/*.nupkg --api-key ${{secrets.PACKAGE_REGISTRY_SECRET}} --source https://nuget.pkg.github.com/jefersonsmota/index.json
