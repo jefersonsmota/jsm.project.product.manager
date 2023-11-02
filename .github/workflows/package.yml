@@ -30,8 +30,8 @@ jobs:
             ${{ runner.os }}-nuget
       - name: Install dependencies
         run: dotnet restore ${{ inputs.project-dir }}
-      - run: dotnet build --configuration Release ${{ inputs.project-dir }}
+      - run: dotnet build --configuration Release ${{ inputs.project-dir }} 
       - name: Create the package
-        run: dotnet pack --configuration Release ${{ inputs.project-dir }}
+        run: dotnet pack --configuration Release ${{ inputs.project-dir }} -o out
       - name: Publish the package to GHPR
-        run: dotnet nuget push ${{ inputs.project-dir }}/bin/Release/*.nupkg --api-key ${{secrets.PACKAGE_REGISTRY_SECRET}} --source https://nuget.pkg.github.com/jefersonsmota/index.json
+        run: dotnet nuget push ./out/*.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ secrets.PACKAGE_REGISTRY_SECRET }}
