@@ -34,4 +34,4 @@ jobs:
       - name: Create the package
         run: dotnet pack --configuration Release ${{ inputs.project-dir }} -o out
       - name: Publish the package to GHPR
-        run: dotnet nuget push ./out/*.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{secrets.PACKAGE_REGISTRY_SECRET}}
+        run: dotnet nuget push ./out/*.nupkg --source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --api-key ${{ secrets.PACKAGE_REGISTRY_SECRET }}
