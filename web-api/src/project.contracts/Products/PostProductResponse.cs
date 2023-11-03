@@ -11,6 +11,6 @@ namespace project.application.Handlers.Products
         }
 
         [JsonProperty(PropertyName = "id", Required = Required.Always)]
-        public Guid Id { get; private set; }
+        public virtual Guid Id { get; private set; }
     }
 }

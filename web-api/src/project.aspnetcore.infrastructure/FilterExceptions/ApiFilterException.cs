@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using project.domain.Exceptions;
 
@@ -14,6 +15,11 @@ namespace project.aspnetcore.infrastructure.FilterExceptions
     }
     public class ApiFilterException : IApiFilterException
     {
+        private readonly ILogger<ApiFilterException> _logger;
+        public ApiFilterException(ILogger<ApiFilterException> logger)
+        {
+            _logger = logger;
+        }
         public IActionResult InternalServerError(Exception exception)
         {
             var result = new
@@ -21,6 +27,8 @@ namespace project.aspnetcore.infrastructure.FilterExceptions
                 code = "SE0001",
                 message = "An error occurred while processing your request.",
             };
+
+            _logger.LogError(exception, "Internal Server Erro {code} : {message}", result.code, result.message);
 
             return new ObjectResult(result)
             {
@@ -36,6 +44,8 @@ namespace project.aspnetcore.infrastructure.FilterExceptions
                 message = exception.Message,
             };
 
+            _logger.LogWarning(exception, "Invalid operation {code} : {message}", result.code, result.message);
+
             return new BadRequestObjectResult(result);
         }
 
@@ -47,6 +57,8 @@ namespace project.aspnetcore.infrastructure.FilterExceptions
                 message = JsonConvert.SerializeObject(exception.Data),
             };
 
+            _logger.LogWarning(exception, "Error validation {code} : {message}", result.code, result.message);
+
             return new BadRequestObjectResult(result);
         }
 
@@ -57,6 +69,8 @@ namespace project.aspnetcore.infrastructure.FilterExceptions
                 code = exception.Code,
                 message = exception.Message,
             };
+
+            _logger.LogWarning(exception, "Not found {code} : {message}", result.code, result.message);
 
             return new NotFoundObjectResult(result);
         }

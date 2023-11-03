@@ -18,15 +18,15 @@ namespace project.contracts.Products
         }
 
         [JsonProperty(PropertyName = "id", Required = Required.Always)]
-        public Guid Id { get; private set; }
+        public virtual Guid Id { get; private set; }
 
         [JsonProperty(PropertyName = "name", Required = Required.Always)]
-        public string Name { get; private set; }
+        public virtual string Name { get; private set; }
 
         [JsonProperty(PropertyName = "price", Required = Required.Always)]
-        public decimal Price { get; private set; }
+        public virtual decimal Price { get; private set; }
 
         [JsonProperty(PropertyName = "imageURL", Required = Required.Always)]
-        public string ImageURL { get; private set; }
+        public virtual string ImageURL { get; private set; }
     }
 }

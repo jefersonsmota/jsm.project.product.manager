@@ -27,8 +27,6 @@ namespace project.api.Filters
             context.ExceptionHandled = true;
             context.Result = result;
 
-            _logger.LogError(context.Exception, context.Exception.Message, result);
-
             base.OnException(context);
         }
     }
