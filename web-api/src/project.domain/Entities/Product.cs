@@ -29,7 +29,7 @@
         }
         protected override string EntityErrorMessage() => "Invalid Product.";
 
-        public void Update(string name, decimal price, string imageUrl)
+        public virtual void Update(string name, decimal price, string imageUrl)
         {
             this.Name = name;
             this.Price = price;
