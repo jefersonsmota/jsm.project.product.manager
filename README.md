@@ -46,11 +46,10 @@
 
 ## :dart: Sobre ##
 
-Website composto por uma tela de login (autenticando via api) e um CRUD de produtos.
+Website composto por uma tela e um CRUD de produtos.
 
 ## :sparkles: Funcionalidades ##
 
-:heavy_check_mark: Login de usuário \
 :heavy_check_mark: Listagem de produtos \
 :heavy_check_mark: Criação/Adição de produtos \
 :heavy_check_mark: Edição de produtos \
@@ -60,11 +59,11 @@ Website composto por uma tela de login (autenticando via api) e um CRUD de produ
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
- - Sql Server 2019
- - C# .net 5
+ - Sql Server 
+ - C# .Net Core
  - EntityFramework Core
  - Html, Css e javascript
- - Angular 12
+ - Angular
 
 ## :white_check_mark: Pré requisitos ##
 
@@ -72,8 +71,8 @@ Antes de começar :checkered_flag:, você precisa ter instalados em sua maquina:
 - [Git](https://git-scm.com)
 - [Node](https://nodejs.org/en/) 
 - [Angular](https://angular.io/)
-- [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/pt-br/) ou [.Net 5 Runtime](https://dotnet.microsoft.com/download/dotnet/5.0)
-- [SQL Server 2019](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
+- [Microsoft Visual Studio](https://visualstudio.microsoft.com/pt-br/) ou [.Net Runtime](https://dotnet.microsoft.com/pt-br/download/dotnet)
+- [SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
 - ou Para container com [Docker](https://hub.docker.com/r/microsoft/mssql-server-windows-express/)
 
 ## :checkered_flag: Começando ##
@@ -87,7 +86,7 @@ $ cd Project.3pMYbIl
 ```
 
 ### Banco de dados
-1. Instale o Microsoft SQL Server 2019 ou superior
+1. Instale o Microsoft SQL Server
 2. Crie base de dados e usuários para execução do projeto
 3. Execute o script de criação das tabelas, presente no repositório.
 ```
@@ -98,7 +97,7 @@ $ cd Project.3pMYbIl
 
 ### API (Back-End)
 
-1. Instale Visual Studio 2019 ou superior, ou somente o .Net Runtime 5.0
+1. Instale Visual Studio ou superior, ou somente o .Net Runtime
 2. Abrar o projeto Web API do diretório \WebApi
 3. Configure a string de conexão de acordo com a base de dados.
 ```json
