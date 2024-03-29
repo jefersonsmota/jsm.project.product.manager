@@ -18,7 +18,7 @@ jobs:
       contents: read
     strategy:
       matrix:
-        dotnet-version: [ '7.0.x' ]
+        dotnet-version: [ '8.0.x' ]
     steps:
       - uses: actions/checkout@v4
       - name: Setup build .Net Core ${{ matrix.dotnet-version }}
