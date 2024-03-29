@@ -5,34 +5,33 @@ using project.domain.Interfaces.Repositories;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace project.application.Handlers.Products
+namespace project.application.Handlers.Products;
+
+public interface ICreateProduct
 {
-    public interface ICreateProduct
+    Task<PostProductResponse> Handler(PostProductRequest request, CancellationToken cancellationToken);
+}
+
+public class CreateProduct : ICreateProduct
+{
+    private readonly IProductRepository _productRepository;
+    private readonly IUnitOfWork _unitOfWork;
+    private readonly IMapper _mapper;
+
+    public CreateProduct(IProductRepository productRepository, IUnitOfWork unitOfWork, IMapper mapper)
     {
-        Task<PostProductResponse> Handler(PostProductRequest request, CancellationToken cancellationToken);
+        _productRepository = productRepository;
+        _unitOfWork = unitOfWork;
+        _mapper = mapper;
     }
 
-    public class CreateProduct : ICreateProduct
+    public async Task<PostProductResponse> Handler(PostProductRequest request, CancellationToken cancellationToken)
     {
-        private readonly IProductRepository _productRepository;
-        private readonly IUnitOfWork _unitOfWork;
-        private readonly IMapper _mapper;
+        var product = _mapper.Map<Product>(request);
 
-        public CreateProduct(IProductRepository productRepository, IUnitOfWork unitOfWork, IMapper mapper)
-        {
-            _productRepository = productRepository;
-            _unitOfWork = unitOfWork;
-            _mapper = mapper;
-        }
+        await _productRepository.Add(product, cancellationToken);
+        await _unitOfWork.SaveChangesAsync(cancellationToken);
 
-        public async Task<PostProductResponse> Handler(PostProductRequest request, CancellationToken cancellationToken)
-        {
-            var product = _mapper.Map<Product>(request);
-
-            await _productRepository.Add(product, cancellationToken);
-            await _unitOfWork.SaveChangesAsync(cancellationToken);
-
-            return new PostProductResponse(product.Id);
-        }
+        return new PostProductResponse(product.Id);
     }
 }
