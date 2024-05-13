@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\project.contracts\jsm.product.manager.contracts.csproj" />
-    <ProjectReference Include="..\project.domain\jsm.product.manager.domain.csproj" />
+    <ProjectReference Include="..\jsm.product.manager.contracts\jsm.product.manager.contracts.csproj" />
+    <ProjectReference Include="..\jsm.product.manager.domain\jsm.product.manager.domain.csproj" />
   </ItemGroup>
 
 </Project>

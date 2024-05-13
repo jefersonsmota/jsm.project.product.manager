@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\project.aspnetcore.infrastructure\jsm.product.manager.aspnetcore.infrastructure.csproj" />
+    <ProjectReference Include="..\jsm.product.manager.aspnetcore.infrastructure\jsm.product.manager.aspnetcore.infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

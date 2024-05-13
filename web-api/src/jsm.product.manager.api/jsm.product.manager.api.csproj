@@ -21,9 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\project.application\jsm.product.manager.application.csproj" />
-    <ProjectReference Include="..\project.aspnetcore.infrastructure\jsm.product.manager.aspnetcore.infrastructure.csproj" />
-    <ProjectReference Include="..\project.domain\jsm.product.manager.domain.csproj" />
+    <ProjectReference Include="..\jsm.product.manager.application\jsm.product.manager.application.csproj" />
+    <ProjectReference Include="..\jsm.product.manager.aspnetcore.infrastructure\jsm.product.manager.aspnetcore.infrastructure.csproj" />
+    <ProjectReference Include="..\jsm.product.manager.domain\jsm.product.manager.domain.csproj" />
   </ItemGroup>
 
   <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

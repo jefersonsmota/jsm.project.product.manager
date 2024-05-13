@@ -10,6 +10,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="coverlet.msbuild" Version="6.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
     <PackageReference Include="Moq.AutoMock" Version="3.5.0" />
     <PackageReference Include="xunit" Version="2.7.0" />
@@ -24,9 +28,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\project.application\jsm.product.manager.application.csproj" />
-    <ProjectReference Include="..\..\src\project.domain\jsm.product.manager.domain.csproj" />
-    <ProjectReference Include="..\project.contracts.tests.utils\jsm.product.manager.contracts.tests.utils.csproj" />
+    <ProjectReference Include="..\..\src\jsm.product.manager.domain\jsm.product.manager.domain.csproj" />
+    <ProjectReference Include="..\jsm.product.manager.contracts.tests.utils\jsm.product.manager.contracts.tests.utils.csproj" />
   </ItemGroup>
 
 </Project>

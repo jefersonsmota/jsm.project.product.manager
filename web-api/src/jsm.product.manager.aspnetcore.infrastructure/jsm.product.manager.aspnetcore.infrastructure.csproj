@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\project.application\jsm.product.manager.application.csproj" />
-    <ProjectReference Include="..\project.data\jsm.product.manager.data.csproj" />
+    <ProjectReference Include="..\jsm.product.manager.application\jsm.product.manager.application.csproj" />
+    <ProjectReference Include="..\jsm.product.manager.data\jsm.product.manager.data.csproj" />
   </ItemGroup>
 
   <ItemGroup>
