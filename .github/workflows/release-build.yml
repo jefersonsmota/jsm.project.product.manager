@@ -14,7 +14,7 @@ jobs:
     needs: release-build
     uses: ./.github/workflows/package.yml
     with:
-      project-dir: ./web-api/src/project.contracts
+      project-dir: ./web-api/src/jsm.product.manager.contracts
     secrets:
       api-pat: ${{ secrets.PACKAGE_REGISTRY_SECRET }}
     
