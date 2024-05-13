@@ -1,10 +1,10 @@
-﻿using project.domain.Entities;
+﻿using jsm.product.manager.domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace project.domain.Interfaces.Repositories
+namespace jsm.product.manager.domain.Interfaces.Repositories
 {
     public interface IProductRepository
     {

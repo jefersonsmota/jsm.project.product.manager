@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using project.domain.Entities;
+using jsm.product.manager.domain.Entities;
 
-namespace project.data.Configuration
+namespace jsm.product.manager.data.Configuration
 {
     public interface IProductEntityFrameworkMapping
     {

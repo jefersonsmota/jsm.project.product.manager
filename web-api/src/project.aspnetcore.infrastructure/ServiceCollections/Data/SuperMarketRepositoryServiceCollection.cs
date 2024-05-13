@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using project.data.Configuration;
-using project.data.Context;
-using project.data.Repositories;
-using project.domain.Interfaces.Repositories;
+using jsm.product.manager.data.Configuration;
+using jsm.product.manager.data.Context;
+using jsm.product.manager.data.Repositories;
+using jsm.product.manager.domain.Interfaces.Repositories;
 
-namespace project.aspnetcore.infrastructure.ServiceCollections.Data
+namespace jsm.product.manager.aspnetcore.infrastructure.ServiceCollections.Data
 {
     public static class SuperMarketRepositoryServiceCollection
     {

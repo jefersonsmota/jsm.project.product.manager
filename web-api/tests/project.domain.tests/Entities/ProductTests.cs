@@ -1,7 +1,7 @@
-﻿using project.contracts.tests.utils.Configurations;
-using project.domain.Entities;
+﻿using jsm.product.manager.contracts.tests.utils.Configurations;
+using jsm.product.manager.domain.Entities;
 
-namespace project.domain.tests.Entities
+namespace jsm.product.manager.domain.tests.Entities
 {
     public class ProductTests
     {

@@ -3,7 +3,7 @@ using System;
 
 #nullable disable
 
-namespace project.data.Migrations
+namespace jsm.product.manager.data.Migrations
 {
     /// <inheritdoc />
     public partial class DefineEntitiesSchemas : Migration

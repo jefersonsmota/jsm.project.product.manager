@@ -1,4 +1,4 @@
-﻿namespace project.domain.Entities;
+﻿namespace jsm.product.manager.domain.Entities;
 
 public interface IProduct : IEntity
 {

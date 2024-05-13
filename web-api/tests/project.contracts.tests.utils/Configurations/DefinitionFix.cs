@@ -1,4 +1,4 @@
-﻿namespace project.contracts.tests.utils.Configurations
+﻿namespace jsm.product.manager.contracts.tests.utils.Configurations
 {
     public static class DefinitionFix
     {

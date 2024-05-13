@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using project.application.Handlers.Products;
-using project.application.Mappings.Products;
+using jsm.product.manager.application.Handlers.Products;
+using jsm.product.manager.application.Mappings.Products;
 
-namespace project.aspnetcore.infrastructure.ServiceCollections.Application
+namespace jsm.product.manager.aspnetcore.infrastructure.ServiceCollections.Application
 {
     public static class ApplicationServiceCollection
     {

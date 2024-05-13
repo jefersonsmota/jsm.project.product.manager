@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection;
 
-namespace project.api.Controllers
+namespace jsm.product.manager.api.Controllers
 {
     [ApiController]
     [AllowAnonymous]

@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc.Filters;
-using project.aspnetcore.infrastructure.FilterExceptions;
-using project.domain.Exceptions;
+using jsm.product.manager.aspnetcore.infrastructure.FilterExceptions;
+using jsm.product.manager.domain.Exceptions;
 
-namespace project.api.Filters
+namespace jsm.product.manager.api.Filters
 {
     public class ApiExceptionFilterAttribute : ExceptionFilterAttribute
     {

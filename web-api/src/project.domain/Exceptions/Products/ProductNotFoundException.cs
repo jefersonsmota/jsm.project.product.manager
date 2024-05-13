@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Runtime.Serialization;
 
-namespace project.domain.Exceptions.Products
+namespace jsm.product.manager.domain.Exceptions.Products
 {
-    [Serializable]
     public class ProductNotFoundException : NotFoundException
     {
         public ProductNotFoundException(string code, Guid productId) : base(code, $"Product id {productId} not found.")
@@ -12,9 +10,5 @@ namespace project.domain.Exceptions.Products
         }
 
         public Guid ProductId { get; private set; }
-
-        public ProductNotFoundException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
     }
 }

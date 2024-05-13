@@ -1,7 +1,7 @@
 ﻿using Moq.AutoMock;
-using project.contracts.Products;
+using jsm.product.manager.contracts.Products;
 
-namespace project.contracts.tests.Products
+namespace jsm.product.manager.contracts.tests.Products
 {
     public class GetProductListResponseTests
     {

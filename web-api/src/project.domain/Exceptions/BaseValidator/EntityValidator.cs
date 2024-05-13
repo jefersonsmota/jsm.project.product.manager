@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace project.domain.Exceptions.BaseValidator
+namespace jsm.product.manager.domain.Exceptions.BaseValidator
 {
     public abstract class EntityValidator<T> where T : BaseEntityValidatorException
     {

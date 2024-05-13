@@ -1,11 +1,11 @@
 ﻿using Moq;
 using Moq.AutoMock;
-using project.application.Handlers.Products;
-using project.contracts.tests.utils.Configurations;
-using project.domain.Entities;
-using project.domain.Interfaces.Repositories;
+using jsm.product.manager.application.Handlers.Products;
+using jsm.product.manager.contracts.tests.utils.Configurations;
+using jsm.product.manager.domain.Entities;
+using jsm.product.manager.domain.Interfaces.Repositories;
 
-namespace project.application.tests.Handlers.Products
+namespace jsm.product.manager.application.tests.Handlers.Products
 {
     public class DeleteProductTests
     {

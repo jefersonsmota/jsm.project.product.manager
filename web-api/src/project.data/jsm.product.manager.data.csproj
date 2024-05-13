@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\project.domain\jsm.product.manager.domain.csproj" />
     <ProjectReference Include="..\project.domain\project.domain.csproj" />
   </ItemGroup>
 

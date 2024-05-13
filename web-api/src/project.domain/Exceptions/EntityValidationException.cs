@@ -1,10 +1,8 @@
-﻿using project.domain.Exceptions.BaseValidator;
-using System;
+﻿using jsm.product.manager.domain.Exceptions.BaseValidator;
 using System.Collections.Generic;
 
-namespace project.domain.Exceptions
+namespace jsm.product.manager.domain.Exceptions
 {
-    [Serializable]
     public class EntityValidationException : BaseEntityValidatorException
     {
         protected EntityValidationException() : base() { }

@@ -1,13 +1,13 @@
 ﻿using Newtonsoft.Json;
-using project.contracts.Products;
-using project.contracts.tests.utils.Configurations;
+using jsm.product.manager.contracts.Products;
+using jsm.product.manager.contracts.tests.utils.Configurations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace project.contracts.tests.Products
+namespace jsm.product.manager.contracts.tests.Products
 {
     public class PutProductRequestTests
     {

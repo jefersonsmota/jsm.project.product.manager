@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace project.contracts.Products
+namespace jsm.product.manager.contracts.Products
 {
     public class PutProductRequest
     {

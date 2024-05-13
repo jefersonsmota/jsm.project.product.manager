@@ -5,7 +5,7 @@ using NLog;
 using NLog.Extensions.Logging;
 using NLog.Web;
 
-namespace project.aspnetcore.infrastructure.ServiceCollections.Infrastructure
+namespace jsm.product.manager.aspnetcore.infrastructure.ServiceCollections.Infrastructure
 {
     public static class ElasticsearchLogServiceCollection
     {

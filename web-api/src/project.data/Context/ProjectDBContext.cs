@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
-using project.data.Configuration;
-using project.domain.Entities;
+using jsm.product.manager.data.Configuration;
+using jsm.product.manager.domain.Entities;
 using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace project.data.Context
+namespace jsm.product.manager.data.Context
 {
     public interface IProjectDBContext : IDisposable
     {

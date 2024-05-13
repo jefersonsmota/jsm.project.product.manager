@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
-using project.contracts.Products;
-using project.contracts.tests.utils.Configurations;
+using jsm.product.manager.contracts.Products;
+using jsm.product.manager.contracts.tests.utils.Configurations;
 
-namespace project.contracts.tests.Products
+namespace jsm.product.manager.contracts.tests.Products
 {
     public class PostProductRequestTests
     {

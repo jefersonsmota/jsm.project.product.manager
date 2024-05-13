@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using project.data.Context;
+using jsm.product.manager.data.Context;
 
 #nullable disable
 
-namespace project.data.Migrations
+namespace jsm.product.manager.data.Migrations
 {
     [DbContext(typeof(ProjectDBContext))]
     [Migration("20231008034605_DefineEntitiesSchemas")]

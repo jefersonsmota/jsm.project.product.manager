@@ -1,8 +1,7 @@
 ﻿using System;
 
-namespace project.domain.Exceptions
+namespace jsm.product.manager.domain.Exceptions
 {
-    [Serializable]
     public abstract class HandlerException : Exception
     {
         public int HttpStatusCode { get; private set; }

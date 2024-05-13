@@ -1,15 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using project.data.Context;
-using project.domain.Entities;
-using project.domain.Exceptions.Products;
-using project.domain.Interfaces.Repositories;
+using jsm.product.manager.data.Context;
+using jsm.product.manager.domain.Entities;
+using jsm.product.manager.domain.Exceptions.Products;
+using jsm.product.manager.domain.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace project.data.Repositories
+namespace jsm.product.manager.data.Repositories
 {
     public class ProductRepository : IProductRepository
     {

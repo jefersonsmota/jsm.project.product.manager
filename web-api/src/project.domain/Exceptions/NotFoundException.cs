@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Runtime.Serialization;
 
-namespace project.domain.Exceptions
+namespace jsm.product.manager.domain.Exceptions
 {
     public abstract class NotFoundException : Exception
     {
@@ -11,8 +10,5 @@ namespace project.domain.Exceptions
         }
 
         public string Code { get; private set; }
-        protected NotFoundException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
     }
 }

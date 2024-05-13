@@ -1,9 +1,9 @@
-﻿using project.domain.Interfaces.Repositories;
+﻿using jsm.product.manager.domain.Interfaces.Repositories;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace project.application.Handlers.Products
+namespace jsm.product.manager.application.Handlers.Products
 {
     public interface IDeleteProduct
     {

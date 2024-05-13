@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using project.contracts.Products;
-using project.domain.Entities;
+using jsm.product.manager.contracts.Products;
+using jsm.product.manager.domain.Entities;
 
-namespace project.application.Mappings.Products
+namespace jsm.product.manager.application.Mappings.Products
 {
     public class GetProductResponseMappingProfile : Profile
     {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using project.application.Handlers.Products;
-using project.contracts.Products;
+using jsm.product.manager.application.Handlers.Products;
+using jsm.product.manager.contracts.Products;
 
-namespace project.api.Controllers
+namespace jsm.product.manager.api.Controllers
 {
     /// <summary>
     /// Api CRUD produtos

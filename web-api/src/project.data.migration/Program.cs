@@ -1,4 +1,4 @@
-using project.aspnetcore.infrastructure.ServiceCollections.Data;
+using jsm.product.manager.aspnetcore.infrastructure.ServiceCollections.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -2,9 +2,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using project.domain.Exceptions;
+using jsm.product.manager.domain.Exceptions;
 
-namespace project.aspnetcore.infrastructure.FilterExceptions
+namespace jsm.product.manager.aspnetcore.infrastructure.FilterExceptions
 {
     public interface IApiFilterException
     {

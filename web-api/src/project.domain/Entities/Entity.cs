@@ -1,8 +1,8 @@
-﻿using project.domain.Exceptions;
-using project.domain.Exceptions.BaseValidator;
+﻿using jsm.product.manager.domain.Exceptions;
+using jsm.product.manager.domain.Exceptions.BaseValidator;
 using System;
 
-namespace project.domain.Entities
+namespace jsm.product.manager.domain.Entities
 {
     public interface IEntity
     {

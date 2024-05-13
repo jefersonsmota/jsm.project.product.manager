@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace project.application.Handlers.Products
+namespace jsm.product.manager.application.Handlers.Products
 {
     public class PostProductResponse
     {

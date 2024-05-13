@@ -1,9 +1,9 @@
 using NLog.Web;
-using project.api.Filters;
-using project.aspnetcore.infrastructure.FilterExceptions;
-using project.aspnetcore.infrastructure.ServiceCollections.Application;
-using project.aspnetcore.infrastructure.ServiceCollections.Data;
-using project.aspnetcore.infrastructure.ServiceCollections.Infrastructure;
+using jsm.product.manager.api.Filters;
+using jsm.product.manager.aspnetcore.infrastructure.FilterExceptions;
+using jsm.product.manager.aspnetcore.infrastructure.ServiceCollections.Application;
+using jsm.product.manager.aspnetcore.infrastructure.ServiceCollections.Data;
+using jsm.product.manager.aspnetcore.infrastructure.ServiceCollections.Infrastructure;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);

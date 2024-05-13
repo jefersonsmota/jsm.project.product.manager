@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace project.domain.Interfaces.Repositories
+namespace jsm.product.manager.domain.Interfaces.Repositories
 {
     public interface IUnitOfWork : IDisposable
     {
