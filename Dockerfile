@@ -8,12 +8,12 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["../../web-api/src/jsm.product.manager.api/jsm.product.manager.api.csproj", "src/jsm.product.manager.api/"]
-COPY ["../../web-api/src/jsm.product.manager.aspnetcore.infrastructure/jsm.product.manager.aspnetcore.infrastructure.csproj", "src/jsm.product.manager.aspnetcore.infrastructure/"]
-COPY ["../../web-api/src/jsm.product.manager.application/jsm.product.manager.application.csproj", "src/jsm.product.manager.application/"]
+COPY ["../../web-api/src/jsm.product.manager.api/jsm.product.manager.api.csproj", "jsm.product.manager.api/"]
+COPY ["../../web-api/src/jsm.product.manager.aspnetcore.infrastructure/jsm.product.manager.aspnetcore.infrastructure.csproj", "jsm.product.manager.aspnetcore.infrastructure/"]
+COPY ["../../web-api/src/jsm.product.manager.application/jsm.product.manager.application.csproj", "jsm.product.manager.application/"]
 COPY ["../../web-api/src/jsm.product.manager.contracts/jsm.product.manager.contracts.csproj", "src/jsm.product.manager.contracts/"]
-COPY ["../../web-api/src/jsm.product.manager.domain/jsm.product.manager.domain.csproj", "src/jsm.product.manager.domain/"]
-COPY ["../../web-api/src/jsm.product.manager.data/jsm.product.manager.data.csproj", "src/jsm.product.manager.data/"]
+COPY ["../../web-api/src/jsm.product.manager.domain/jsm.product.manager.domain.csproj", "jsm.product.manager.domain/"]
+COPY ["../../web-api/src/jsm.product.manager.data/jsm.product.manager.data.csproj", "jsm.product.manager.data/"]
 RUN dotnet restore "./src/jsm.product.manager.api/jsm.product.manager.api.csproj"
 COPY ./../../web-api/src .
 WORKDIR "/src/jsm.product.manager.api"
