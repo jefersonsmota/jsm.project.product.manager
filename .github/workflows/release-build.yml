@@ -10,11 +10,20 @@ jobs:
     with:
       work-dir: web-api
 
-  push-to-registy:
+  push-to-nuget-package:
     needs: release-build
     uses: ./.github/workflows/package.yml
     with:
-      project-dir: ./web-api/src/project.contracts
+      project-dir: ./web-api/src/jsm.product.manager.contracts
     secrets:
-      api-pat: ${{ secrets.PACKAGE_REGISTRY_SECRET }}
+      api-pat: ${{ secrets.GITHUB_TOKEN }}
+
+  push-to-publish:
+    needs: release-build
+    uses: ./.github/workflows/docker-publish.yml
+    with:
+      work-dir: ./deploy/container
+      platform: linux/amd64
+    secrets:
+      api-pat: ${{ secrets.GITHUB_TOKEN }}
     
