@@ -7,8 +7,8 @@
     <Nullable>enable</Nullable>
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	<Authors>Jeferson Mota</Authors>
-	<PackageDescription>This package adds the Project.3pMYbIl API contracts.</PackageDescription>
-	<RepositoryUrl>https://github.com/jefersonsmota/Project.3pMYbIl</RepositoryUrl>
+	<PackageDescription>This package adds the jsm.product.manager.contracts API contracts.</PackageDescription>
+	<RepositoryUrl>https://github.com/jefersonsmota/jsm.product.manager.contracts</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
