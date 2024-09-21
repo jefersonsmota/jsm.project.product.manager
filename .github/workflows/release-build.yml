@@ -25,5 +25,4 @@ jobs:
       work-dir: ./deploy/container
       platform: linux/amd64
     secrets:
-      api-pat: ${{ secrets.GITHUB_TOKEN }}
-    
+      api-pat: ${{ secrets.GITHUB_TOKEN }}    
