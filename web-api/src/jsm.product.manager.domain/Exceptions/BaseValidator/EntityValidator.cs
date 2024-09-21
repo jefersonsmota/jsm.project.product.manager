@@ -8,10 +8,9 @@ namespace jsm.product.manager.domain.Exceptions.BaseValidator
         private IDictionary<string, string> _errors;
         private T _exception;
 
-        public EntityValidator()
-        {
-            _errors = new Dictionary<string, string>();
-        }
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
+        public EntityValidator() => _errors = new Dictionary<string, string>();
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
 
         protected abstract string EntityErrorMessage();
 
@@ -31,8 +30,14 @@ namespace jsm.product.manager.domain.Exceptions.BaseValidator
 
             if (_errors.Count > 0)
             {
+#pragma warning disable CS8601 // Possible null reference assignment.
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
                 _exception = (T)Activator.CreateInstance(typeof(T), EntityErrorMessage(), _errors);
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
+#pragma warning restore CS8601 // Possible null reference assignment.
+#pragma warning disable CS8597 // Thrown value may be null.
                 throw _exception;
+#pragma warning restore CS8597 // Thrown value may be null.
             }
         }
     }
